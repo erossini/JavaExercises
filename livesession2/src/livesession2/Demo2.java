@@ -17,8 +17,8 @@ public class Demo2 {
             return s.length() > 5;
         };
 
-        System.out.println("\nPredicate");
-        System.out.println("----------------");
+        System.out.println("\nPredicate example");
+        System.out.println("-----------------");
         System.out.println(isLong.test("apple"));              // false
         System.out.println(isLong.test("this is an example")); // true
 
