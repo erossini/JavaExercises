@@ -1,4 +1,4 @@
-/*
+package lombokStart;/*
 How to add lombok in IntelliJ
 
 - Open IntelliJ IDEA.
@@ -22,7 +22,7 @@ import lombok.*;
 @ToString
 public class Author {
     /**
-     * Author identification
+     * lombokStart.Author identification
      *
      * @param id New value for the author identification
      * @return The current value of this author identification
@@ -30,7 +30,7 @@ public class Author {
     @Getter @Setter private int id;
 
     /**
-     * Author's name
+     * lombokStart.Author's name
      *
      * @param name The name of the author
      * @return The current value of this author name
@@ -43,7 +43,7 @@ public class Author {
     private final String birthPlace = "Somewhere";
 
     /**
-     * This is the constructor of the Author class
+     * This is the constructor of the lombokStart.Author class
      *
      * @param id This is the author identifier
      * @param name This is the first name of the author
