@@ -18,13 +18,24 @@ import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @EqualsAndHashCode
 @ToString
 public class Author {
-    private int id;
-    private String name;
+    /**
+     * Author identification
+     *
+     * @param id New value for the author identification
+     * @return The current value of this author identification
+     */
+    @Getter @Setter private int id;
+
+    /**
+     * Author's name
+     *
+     * @param name The name of the author
+     * @return The current value of this author name
+     */
+    @Getter @Setter private String name;
 
     private String surname;
     private String email;
