@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/boilerplate/boilerplate.iml" filepath="$PROJECT_DIR$/boilerplate/boilerplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defMethod/defMethod.iml" filepath="$PROJECT_DIR$/defMethod/defMethod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lambda/lambda.iml" filepath="$PROJECT_DIR$/lambda/lambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/livesession2.iml" filepath="$PROJECT_DIR$/livesession2.iml" />
     </modules>
   </component>

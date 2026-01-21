@@ -10,6 +10,8 @@ public class Demo2 {
     // Consumer<T>    accept
     // Function<T, R> apply (receives T and return R)
     // Supplier<T>    get
+    // see this JavaDoc for the definition
+    // https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
     static void main(String[] args) {
         // Predicate
         // if the string is longer than 5 chars
