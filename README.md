@@ -6,28 +6,7 @@
 jshell> Class<?> clazz = String.class;
 clazz ==> class java.lang.String
 
-jshell> clazz.get
-|  Error:
-|  cannot find symbol
-|    symbol:   variable get
-|  clazz.get
-|  ^-------^
-
-jshell> clazz.ge
-|  Error:
-|  cannot find symbol
-|    symbol:   variable ge
-|  clazz.ge
-|  ^------^
-
-jshell> clazz.ge
-|  Error:
-|  cannot find symbol
-|    symbol:   variable ge
-|  clazz.ge
-|  ^------^
-
-jshell> clazz.ge
+jshell> clazz.ge <press tab>
 getAnnotatedInterfaces()        getAnnotatedSuperclass()        getAnnotation(                  getAnnotations()                
 getAnnotationsByType(           getCanonicalName()              getClass()                      getClassLoader()                
 getClasses()                    getComponentType()              getConstructor(                 getConstructors()               
@@ -44,7 +23,7 @@ getSuperclass()                 getTypeName()                   getTypeParameter
 jshell> clazz.getSuperclass()
 $2 ==> class java.lang.Object
 
-jshell> clazz.getSuperclass().ge
+jshell> clazz.getSuperclass().ge <press tab>
 getAnnotatedInterfaces()        getAnnotatedSuperclass()        getAnnotation(                  getAnnotations()                
 getAnnotationsByType(           getCanonicalName()              getClass()                      getClassLoader()                
 getClasses()                    getComponentType()              getConstructor(                 getConstructors()               
@@ -65,15 +44,6 @@ jshell> Method[] methods = clazz.getMe
 getMethods()   
 
 <press tab again to see all possible completions>
-jshell> Method[] methods = clazz.getMethod()
-|  Error:
-|  method getMethod in class java.lang.Class<T> cannot be applied to given types;
-|    required: java.lang.String,java.lang.Class<?>[]
-|    found:    no arguments
-|    reason: actual and formal argument lists differ in length
-|  Method[] methods = clazz.getMethod();
-|                     ^-------------^
-
 jshell> Method[] methods = clazz.getMethods()
 methods ==> Method[93] { public boolean java.lang.String.equa ... ang.InterruptedException }
 
@@ -90,41 +60,6 @@ jshell> class SecretAgent {
 
 jshell> SecretAgent sa = new SecretAgent();
 sa ==> SecretAgent@2d38eb89
-
-jshell> sa.codeName
-|  Error:
-|  codeName has private access in SecretAgent
-|  sa.codeName
-|  ^---------^
-
-jshell> sa.codeName()
-|  Error:
-|  cannot find symbol
-|    symbol:   method codeName()
-|  sa.codeName()
-|  ^---------^
-
-jshell> Field field = sa.getClass().getDecl
-getDeclaredField(   
-
-<press tab again to see all possible completions>
-jshell> Field field = sa.getClass().getDeclararedField("codeName")
-|  Error:
-|  cannot find symbol
-|    symbol:   method getDeclararedField(java.lang.String)
-|  Field field = sa.getClass().getDeclararedField("codeName");
-|                ^------------------------------^
-
-jshell> Field field = sa.getClass().getDecla
-getDeclaredField(   
-
-<press tab again to see all possible completions>
-jshell> Field field = sa.getClass().getDeclararedField("codeName")
-|  Error:
-|  cannot find symbol
-|    symbol:   method getDeclararedField(java.lang.String)
-|  Field field = sa.getClass().getDeclararedField("codeName");
-|                ^------------------------------^
 
 jshell> Field field = sa.getClass().getDeclaredField("codeName")
 field ==> private java.lang.String SecretAgent.codeName
@@ -149,11 +84,6 @@ calc ==> Calculator@63c12fb0
 
 jshell> String methodName = "add";
 methodName ==> "add"
-
-jshell> Method method = calc.getClass().getMethod(methodName)
-|  Exception java.lang.NoSuchMethodException: REPL.$JShell$21$Calculator.add()
-|        at Class.getMethod (Class.java:2166)
-|        at (#18:1)
 
 jshell> Method method = calc.getClass().getMethod(methodName, int.class, int.class)
 method ==> public void Calculator.add(int,int)
