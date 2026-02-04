@@ -138,6 +138,27 @@ jshell> field.get(sa)
 $12 ==> "Zoonie"
 
 jshell> field.set(sa, "Steve")
-```
+
 jshell> field.get(sa)
 $14 ==> "Steve"
+```
+
+```
+jshell> Object calc = new Calculator();
+calc ==> Calculator@63c12fb0
+
+jshell> String methodName = "add";
+methodName ==> "add"
+
+jshell> Method method = calc.getClass().getMethod(methodName)
+|  Exception java.lang.NoSuchMethodException: REPL.$JShell$21$Calculator.add()
+|        at Class.getMethod (Class.java:2166)
+|        at (#18:1)
+
+jshell> Method method = calc.getClass().getMethod(methodName, int.class, int.class)
+method ==> public void Calculator.add(int,int)
+
+jshell> method.invoke(calc, 10, 20)
+Result: 30
+$20 ==> null
+```
